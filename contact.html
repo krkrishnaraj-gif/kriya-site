@@ -1,75 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Contact | Kriya</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.min.css"/><script defer src="assets/js/main.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact • Kriya</title>
+  <meta name="description" content="Contact Kriya Biosys – distributor enquiries and partnerships." />
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="logo" href="index.html" style="font-weight:800;color:#111;text-decoration:none">Kriya</a>
-    <nav class="nav"><ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="products/index.html">Products</a></li>
-      <li><a href="karyo.html">Karyo</a></li>
-      <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul></nav>
-  </div>
-</header>
-
-<main>
-  <section class="page-hero">
-    <div class="container">
-      <span class="badge">B2B Focus</span> <span class="badge">Global Supply</span> <span class="badge">Certified</span>
-      <h1>Get in Touch</h1>
-      <p>We’d love to hear from you — whether you’re a distributor, partner, or exploring our products.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="assets/img/logo.webp" alt="Kriya Logo" onerror="this.src='assets/img/logo.png'">
+      </div>
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <a href="products/index.html">Products</a>
+            <ul class="dropdown-content">
+              <li><a href="products/biocontrol.html" data-tip="Microbial &amp; botanical">Biocontrol</a></li>
+              <li><a href="products/biostimulants.html" data-tip="Plant performance">Biostimulants</a></li>
+              <li><a href="products/biofertilizers.html" data-tip="Nutrient efficiency">Biofertilizers</a></li>
+              <li><a href="products/substrates.html" data-tip="Soil &amp; spray aids">Substrates</a></li>
+              <li><a href="products/home-garden.html" data-tip="Consumer packs">Home &amp; Garden</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="technology/karyo.html">Technology</a>
+            <ul class="dropdown-content">
+              <li><a href="technology/karyo.html" data-tip="Delivery platform">Karyo</a></li>
+              <li><a href="technology/wynn.html" data-tip="Microbial platform">Wynn</a></li>
+            </ul>
+          </li>
+          <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section class="section">
-    <div class="container grid two">
-      <div class="card info">
-        <h2>Direct contact</h2>
-        <p><strong>Address</strong></p>
-        <p>233, Aarthi Nagar Mohan Nagar,<br/>Narasothipatti, Salem,<br/>Tamilnadu 636004, India</p>
-        <p><strong>Phone</strong>: <a href="tel:+916385848466">+91 63858 48466</a></p>
-        <p><strong>WhatsApp</strong>: <a href="https://wa.me/916385848466" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
-        <p><strong>Email</strong>: <a href="mailto:info@kriya.ltd">info@kriya.ltd</a></p>
-
-        <h3 style="margin-top:14px">Follow us</h3>
-        <div class="pills">
-          <a class="pill" href="#" aria-label="LinkedIn">LinkedIn</a>
-          <a class="pill" href="#" aria-label="Instagram">Instagram</a>
-          <a class="pill" href="#" aria-label="Facebook">Facebook</a>
-          <a class="pill" href="#" aria-label="Twitter (X)">Twitter (X)</a>
-          <a class="pill" href="#" aria-label="YouTube">YouTube</a>
+  <!-- Text-only contact (fast load) -->
+  <section class="hero hero--tight">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Contact</h1>
+        <p>We work with distributors, formulators and brand owners. Reach out and our team will get back promptly.</p>
+        <div class="tile" style="margin-top:10px">
+          <p><strong>Email:</strong> <a href="mailto:info@kriya.ltd">info@kriya.ltd</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+916385848466">+91 63858 48466</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/916385848466">+91 63858 48466</a></p>
+          <p><strong>Address:</strong> 233, Aarthi Nagar Mohan Nagar, Narasothipatti, Salem, Tamilnadu 636004, India</p>
         </div>
       </div>
-
-      <div class="card">
-        <h2>Send a message</h2>
-        <form id="contact-form" class="form">
-          <input type="text" name="name" placeholder="Your name" required/>
-          <input type="email" name="email" placeholder="Work email" required/>
-          <input type="tel" name="phone" placeholder="Phone (optional)"/>
-          <textarea name="message" rows="5" placeholder="How can we help?"></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-        <p style="color:#5B636C;font-size:.9rem;margin-top:8px">By clicking “Send Message,” your email client opens with your message prefilled. No data is stored on our servers.</p>
+      <div class="hero-image">
+        <picture>
+          <source srcset="assets/img/hero-800.webp 800w, assets/img/hero-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 40vw" type="image/webp">
+          <img src="assets/img/hero-1200.webp" alt="" onerror="this.src='assets/img/hero-placeholder.png'">
+        </picture>
       </div>
     </div>
   </section>
-</main>
 
-<footer class="footer">
-  <div class="container inner">
-    © <script>document.write(new Date().getFullYear())</script> Kriya
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Kriya Biosys Private Limited</p>
+      <div class="footer-icons">
+        <a href="mailto:info@kriya.ltd" title="Email"><img src="assets/img/icon-email.webp" alt="Email"></a>
+        <a href="tel:+916385848466" title="Phone"><img src="assets/img/icon-phone.webp" alt="Phone"></a>
+        <a href="https://wa.me/916385848466" title="WhatsApp"><img src="assets/img/icon-whatsapp.webp" alt="WhatsApp"></a>
+        <a href="#" title="Twitter"><img src="assets/img/icon-twitter.webp" alt="Twitter"></a>
+        <a href="#" title="LinkedIn"><img src="assets/img/icon-linkedin.webp" alt="LinkedIn"></a>
+        <a href="#" title="Instagram"><img src="assets/img/icon-instagram.webp" alt="Instagram"></a>
+        <a href="#" title="Facebook"><img src="assets/img/icon-facebook.webp" alt="Facebook"></a>
+      </div>
+      <p class="disclaimer">B2B information only. Labels and uses vary by region — always follow local regulations.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
 </body>
 </html>
