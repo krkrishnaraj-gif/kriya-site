@@ -1,47 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kriya Biosys</title>
-  <link rel="stylesheet" href="assets/css/site.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kriya Biosys Private Limited</title>
+  <meta name="description" content="Premium, eco‑friendly biocontrols, biostimulants, biofertilizers, substrates and home & garden solutions for distributors.">
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html" class="logo">
-      <img src="assets/images/logo.png" alt="Kriya Logo" />
-    </a>
-    <nav>
-      <ul>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/img/logo.webp" alt="Kriya Logo" onerror="this.src='assets/img/logo.png'">
+    </div>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="products/index.html">Products</a></li>
-        <li><a href="technology/karyo.html">Technology</a></li>
+        <li class="dropdown">
+          <a href="products/index.html">Products</a>
+          <ul class="dropdown-content">
+            <li><a href="products/biocontrol.html" title="Microbial & botanical">Biocontrol</a></li>
+            <li><a href="products/biostimulants.html" title="Plant performance">Biostimulants</a></li>
+            <li><a href="products/biofertilizers.html" title="Nutrient efficiency">Biofertilizers</a></li>
+            <li><a href="products/substrates.html" title="Soil & spray aids">Substrates</a></li>
+            <li><a href="products/home-garden.html" title="Consumer packs">Home &amp; Garden</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="technology/karyo.html">Technology</a>
+          <ul class="dropdown-content">
+            <li><a href="technology/karyo.html" title="Delivery platform">Karyo</a></li>
+            <li><a href="technology/wynn.html" title="Microbial platform">Wynn</a></li>
+          </ul>
+        </li>
         <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>Welcome to Kriya Biosys</h1>
-      <p>Innovative solutions in Biocontrol, Biostimulants, Biofertilizers, Substrates, and Home & Garden.</p>
-    </section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Driving Sustainable Agriculture with Innovation</h1>
+      <p>Kriya develops next‑generation biocontrols, biostimulants, biofertilizers, substrates, and home &amp; garden solutions — delivering effective, safe, and eco‑friendly crop inputs worldwide.</p>
+      <a href="products/index.html" class="btn">Browse Products</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/img/hero-placeholder.webp" alt="Kriya hero" onerror="this.src='assets/img/hero-placeholder.png'">
+    </div>
+  </section>
 
-    <section class="categories">
-      <h2>Product Categories</h2>
-      <div class="grid">
-        <a href="products/biocontrol.html" class="tile">Biocontrol</a>
-        <a href="products/biostimulants.html" class="tile">Biostimulants</a>
-        <a href="products/biofertilizers.html" class="tile">Biofertilizers</a>
-        <a href="products/substrates.html" class="tile">Substrates</a>
-        <a href="products/home-garden.html" class="tile">Home & Garden</a>
-      </div>
-    </section>
-  </main>
+  <!-- Product Categories -->
+  <section class="categories">
+    <h2>Product Categories</h2>
+    <div class="tile-grid">
+      <a class="tile" href="products/biocontrol.html">Biocontrol</a>
+      <a class="tile" href="products/biostimulants.html">Biostimulants</a>
+      <a class="tile" href="products/biofertilizers.html">Biofertilizers</a>
+      <a class="tile" href="products/substrates.html">Substrates</a>
+      <a class="tile" href="products/home-garden.html">Home &amp; Garden</a>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Kriya Biosys Private Limited</p>
+  <!-- Featured Products -->
+  <section class="featured">
+    <h2>Featured Products</h2>
+    <div class="tile-grid">
+      <a class="tile" href="products/biocontrol/azadirachtin.html">Ecoza</a>
+      <a class="tile" href="products/biocontrol/spindura.html">Spindura</a>
+      <a class="tile" href="products/biocontrol/mycova.html">Mycova</a>
+      <a class="tile" href="products/biostimulants/zenita.html">Zenita</a>
+    </div>
+  </section>
+
+  <!-- Technology & Contract Manufacturing -->
+  <section class="features">
+    <div class="tile-grid two-col">
+      <a class="tile" href="technology/karyo.html">Karyo Technology</a>
+      <a class="tile" href="contract-manufacturing.html">Contract Manufacturing</a>
+    </div>
+  </section>
+
+  <!-- Distributor CTA -->
+  <section class="cta">
+    <h2>Become a Distributor</h2>
+    <p>Partner with us to bring innovative biological solutions to more farmers worldwide.</p>
+    <a href="contact.html" class="btn">Work with Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Kriya Biosys Private Limited</p>
+    <div class="footer-icons">
+      <a href="mailto:info@kriya.ltd" title="Email"><img src="assets/img/icon-email.webp" alt="Email"></a>
+      <a href="tel:+916385848466" title="Phone"><img src="assets/img/icon-phone.webp" alt="Phone"></a>
+      <a href="https://wa.me/916385848466" title="WhatsApp"><img src="assets/img/icon-whatsapp.webp" alt="WhatsApp"></a>
+      <a href="#" title="Twitter"><img src="assets/img/icon-twitter.webp" alt="Twitter"></a>
+      <a href="#" title="LinkedIn"><img src="assets/img/icon-linkedin.webp" alt="LinkedIn"></a>
+      <a href="#" title="Instagram"><img src="assets/img/icon-instagram.webp" alt="Instagram"></a>
+      <a href="#" title="Facebook"><img src="assets/img/icon-facebook.webp" alt="Facebook"></a>
+    </div>
+    <p class="disclaimer">All trademarks are the property of their respective owners. For informational purposes only.</p>
   </footer>
 
   <script src="assets/js/site.js"></script>
