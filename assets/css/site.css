@@ -114,4 +114,39 @@ body {
   font-size: 0.85rem;
   color: #666;
 }
+/* Hero refinements (v7 feel) */
+.hero--tight {
+  padding: 2.5rem 2rem 2rem;
+}
+.hero-actions { display:flex; gap:.75rem; margin-top:.75rem; }
+.btn { border-radius:8px; }
+.btn.btn--ghost { background:#E9F1E0; color:#6B9A40; border:1px solid #6B9A40; }
+.btn.btn--ghost:hover { background:#dbe8cd; }
+
+/* Badges row */
+.hero-badges { list-style:none; margin-top:.75rem; display:flex; flex-wrap:wrap; gap:.5rem; color:#6B9A40; }
+.hero-badges li { background:#E9F1E0; padding:.25rem .5rem; border-radius:999px; font-size:.9rem; }
+
+/* Certification strip */
+.cert-strip { padding: 0.75rem 1.5rem; border-top:1px solid #eef2ea; border-bottom:1px solid #eef2ea; background:#fff; }
+.cert-track { display:flex; gap:2rem; align-items:center; justify-content:center; flex-wrap:wrap; }
+.cert-logo { height:42px; transition: filter .2s ease, transform .2s ease; }
+.cert-logo:hover { filter: grayscale(100%); transform: translateY(-1px); }
+
+/* Tile grids */
+.tile-grid--five { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 1100px) { .tile-grid--five { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px) { .tile-grid--five { grid-template-columns: repeat(2, 1fr); } }
+
+.tile--with-img { display:flex; flex-direction:column; align-items:center; gap:.75rem; aspect-ratio:1/1; }
+.tile--with-img img { width:60%; height:auto; object-fit:contain; }
+.tile--left { text-align:left; }
+
+/* Two and four column helpers */
+.tile-grid--two { grid-template-columns: repeat(2, 1fr); }
+.tile-grid--four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .tile-grid--four { grid-template-columns: repeat(2, 1fr); } }
+
+/* Section headings spacing */
+.categories h2, .featured h2, .why h2 { padding: 0 2rem; }
 
