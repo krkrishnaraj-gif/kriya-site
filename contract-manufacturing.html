@@ -1,57 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contract Manufacturing – Kriya Biosys</title>
-  <link rel="stylesheet" href="assets/css/site.css"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contract Manufacturing — Kriya Biosys</title>
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <header class="navbar">
-    <a href="index.html" class="logo">
-      <img src="assets/images/logo.png" alt="Kriya Logo"/>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="products/index.html">Products</a></li>
-        <li><a href="technology/karyo.html">Technology</a></li>
-        <li><a href="contract-manufacturing.html" aria-current="page">Contract Manufacturing</a></li>
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/img/logo.webp" alt="Kriya Logo" onerror="this.src='assets/img/logo.png'">
+    </div>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="products/index.html">Products</a>
+          <ul class="dropdown-content">
+            <li><a href="products/biocontrol.html">Biocontrol</a></li>
+            <li><a href="products/biostimulants.html">Biostimulants</a></li>
+            <li><a href="products/biofertilizers.html">Biofertilizers</a></li>
+            <li><a href="products/substrates.html">Substrates</a></li>
+            <li><a href="products/home-garden.html">Home &amp; Garden</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="technology/karyo.html">Technology</a>
+          <ul class="dropdown-content">
+            <li><a href="technology/karyo.html">Karyo</a></li>
+            <li><a href="technology/wynn.html">Wynn</a></li>
+          </ul>
+        </li>
+        <li><a class="active" href="contract-manufacturing.html">Contract Manufacturing</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main class="page">
-    <section class="hero hero--small">
+  <section class="hero">
+    <div class="hero-content">
       <h1>Contract Manufacturing</h1>
-      <p>End-to-end support from extraction to finished goods—botanical &amp; microbial.</p>
-    </section>
+      <p>End‑to‑end manufacturing for botanicals and biopesticides — from extraction and fermentation to formulation, packing and analytics. Quality systems, documentation and steady supply for distributors and private‑label partners.</p>
+      <a class="btn" href="contact.html">Start a project</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/img/hero-placeholder.webp" alt="Contract Manufacturing" onerror="this.src='assets/img/hero-placeholder.png'">
+    </div>
+  </section>
 
-    <section class="content">
-      <h2>Capabilities</h2>
+  <section class="tile-grid" style="padding-top:1rem">
+    <div class="tile" style="text-align:left">
+      <h2>SC‑CO₂ Extraction</h2>
       <ul>
-        <li><strong>Supercritical CO₂ Extraction</strong> — selective extraction with clean solventless finish.</li>
-        <li><strong>Solvent &amp; Aqueous Extraction</strong> — optimized for targeted phytochemicals.</li>
-        <li><strong>Microbial Fermentation &amp; Metabolite Recovery</strong> — media optimization, SSF, downstream processing.</li>
-        <li><strong>Formulation &amp; Packing</strong> — botanical &amp; biopesticide formats (SC, EC, WP, SL), stability-first design.</li>
-        <li><strong>R&amp;D &amp; Analytics</strong> — method development, standardization, batch-wise QC.</li>
+        <li>Selective extraction of bioactives</li>
+        <li>Low‑temperature, solvent‑free</li>
+        <li>Standardized fractions</li>
       </ul>
-
-      <h2>Engagement models</h2>
+    </div>
+    <div class="tile" style="text-align:left">
+      <h2>Solvent &amp; Aqueous Extraction</h2>
       <ul>
-        <li>Private label manufacturing</li>
-        <li>Co-development and tech transfer</li>
-        <li>Scale-up &amp; pilot runs</li>
+        <li>GRAS solvents &amp; water systems</li>
+        <li>Filtration, concentration, polishing</li>
+        <li>Batch records &amp; traceability</li>
       </ul>
+    </div>
+    <div class="tile" style="text-align:left">
+      <h2>Microbial Fermentation</h2>
+      <ul>
+        <li>Media optimization &amp; scale‑up</li>
+        <li>Solid‑state &amp; submerged options</li>
+        <li>Metabolite recovery &amp; standardization</li>
+      </ul>
+    </div>
+    <div class="tile" style="text-align:left">
+      <h2>Formulation &amp; Packing</h2>
+      <ul>
+        <li>EC, SC, WP, WDG, SL</li>
+        <li>Stability testing &amp; QA plans</li>
+        <li>Retail &amp; bulk formats</li>
+      </ul>
+    </div>
+    <div class="tile" style="text-align:left">
+      <h2>R&amp;D, Analytics</h2>
+      <ul>
+        <li>Method dev &amp; validation</li>
+        <li>Bioassay support</li>
+        <li>Regulatory documentation</li>
+      </ul>
+    </div>
+  </section>
 
-      <p><a class="cta" href="mailto:info@kriya.ltd">Discuss a project →</a></p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Kriya Biosys Private Limited</p>
+  <footer class="site-footer">
+    <p>&copy; 2025 Kriya Biosys Private Limited</p>
+    <div class="footer-icons">
+      <a href="mailto:info@kriya.ltd" title="Email"><img src="assets/img/icon-email.webp" alt="Email"></a>
+      <a href="tel:+916385848466" title="Phone"><img src="assets/img/icon-phone.webp" alt="Phone"></a>
+      <a href="https://wa.me/916385848466" title="WhatsApp"><img src="assets/img/icon-whatsapp.webp" alt="WhatsApp"></a>
+      <a href="#" title="Twitter"><img src="assets/img/icon-twitter.webp" alt="Twitter"></a>
+      <a href="#" title="LinkedIn"><img src="assets/img/icon-linkedin.webp" alt="LinkedIn"></a>
+      <a href="#" title="Instagram"><img src="assets/img/icon-instagram.webp" alt="Instagram"></a>
+      <a href="#" title="Facebook"><img src="assets/img/icon-facebook.webp" alt="Facebook"></a>
+    </div>
+    <p class="disclaimer">Manufacturing capabilities are subject to project scope and regulatory context.</p>
   </footer>
+
   <script src="assets/js/site.js"></script>
 </body>
 </html>
