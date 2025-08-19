@@ -20,18 +20,18 @@
         <li class="dropdown">
           <a href="products/index.html">Products</a>
           <ul class="dropdown-content">
-            <li><a href="products/biocontrol.html" title="Microbial & botanical">Biocontrol</a></li>
-            <li><a href="products/biostimulants.html" title="Plant performance">Biostimulants</a></li>
-            <li><a href="products/biofertilizers.html" title="Nutrient efficiency">Biofertilizers</a></li>
-            <li><a href="products/substrates.html" title="Soil & spray aids">Substrates</a></li>
-            <li><a href="products/home-garden.html" title="Consumer packs">Home &amp; Garden</a></li>
+            <li><a href="products/biocontrol.html" data-tip="Microbial &amp; botanical">Biocontrol</a></li>
+            <li><a href="products/biostimulants.html" data-tip="Plant performance">Biostimulants</a></li>
+            <li><a href="products/biofertilizers.html" data-tip="Nutrient efficiency">Biofertilizers</a></li>
+            <li><a href="products/substrates.html" data-tip="Soil &amp; spray aids">Substrates</a></li>
+            <li><a href="products/home-garden.html" data-tip="Consumer packs">Home &amp; Garden</a></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="technology/karyo.html">Technology</a>
           <ul class="dropdown-content">
-            <li><a href="technology/karyo.html" title="Delivery platform">Karyo</a></li>
-            <li><a href="technology/wynn.html" title="Microbial platform">Wynn</a></li>
+            <li><a href="technology/karyo.html" data-tip="Delivery platform">Karyo</a></li>
+            <li><a href="technology/wynn.html" data-tip="Microbial platform">Wynn</a></li>
           </ul>
         </li>
         <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
@@ -40,14 +40,14 @@
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero (right-top image) -->
   <section class="hero hero--tight">
     <div class="hero-content">
       <h1>Organic Crop Care Solutions</h1>
       <p>Premium botanical and microbial inputs engineered for stability, handling and efficacy. Designed for distributor programs and private‑label portfolios worldwide.</p>
       <div class="hero-actions">
         <a href="products/index.html" class="btn">Browse Products</a>
-        <a href="contact.html" class="btn btn--ghost">Become a Distributor</a>
+        <a href="contact.html" class="btn btn--ghost">Become an Associate</a>
       </div>
       <ul class="hero-badges">
         <li>Premium • Eco‑friendly</li>
@@ -56,20 +56,39 @@
       </ul>
     </div>
     <div class="hero-image">
-      <img src="assets/img/hero-placeholder.webp" alt="Kriya product showcase" onerror="this.src='assets/img/hero-placeholder.png'">
+      <picture>
+        <source
+          srcset="assets/img/hero-800.webp 800w,
+                  assets/img/hero-1200.webp 1200w,
+                  assets/img/hero-1600.webp 1600w"
+          sizes="(max-width: 900px) 92vw, 40vw"
+          type="image/webp">
+        <img src="assets/img/hero-1200.webp" alt="Kriya product showcase"
+             onerror="this.src='assets/img/hero-placeholder.png'">
+      </picture>
     </div>
   </section>
 
-  <!-- Certification strip -->
-  <section class="cert-strip">
-    <div class="cert-track">
-      <!-- Use your existing SVGs/WebPs; filenames are examples -->
-      <img src="assets/img/certs/iso.svg" alt="ISO" class="cert-logo">
-      <img src="assets/img/certs/gmp.svg" alt="GMP" class="cert-logo">
-      <img src="assets/img/certs/omri.svg" alt="OMRI" class="cert-logo">
-      <img src="assets/img/certs/ecocert.svg" alt="Ecocert" class="cert-logo">
-      <img src="assets/img/certs/chemexcil.svg" alt="Chemexcil" class="cert-logo">
-      <img src="assets/img/certs/shefexil.svg" alt="SHEFEXIL" class="cert-logo">
+  <!-- Why Kriya? -->
+  <section class="why">
+    <h2>Why Kriya?</h2>
+    <div class="tile-grid tile-grid--four">
+      <div class="tile tile--left">
+        <h3>Premium &amp; Eco‑friendly</h3>
+        <p>We combine high‑purity botanicals and robust microbials with advanced delivery systems for consistent, residue‑conscious performance.</p>
+      </div>
+      <div class="tile tile--left">
+        <h3>Advanced Formulation</h3>
+        <p>Micro/nano‑encapsulation, co‑formulants for adhesion and rainfastness, and stability programs that protect sensitive actives.</p>
+      </div>
+      <div class="tile tile--left">
+        <h3>Distributor‑first</h3>
+        <p>Private‑label options, documentation support, and dependable supply — tailored for multi‑market product portfolios.</p>
+      </div>
+      <div class="tile tile--left">
+        <h3>Manufacturing Depth</h3>
+        <p>SC‑CO₂ extraction, solvent/aqueous extraction, fermentation, and packaging backed by analytics and quality systems.</p>
+      </div>
     </div>
   </section>
 
@@ -127,6 +146,18 @@
     </div>
   </section>
 
+  <!-- Certification strip -->
+  <section class="cert-strip">
+    <div class="cert-track">
+      <img src="assets/img/certs/iso.svg" alt="ISO" class="cert-logo">
+      <img src="assets/img/certs/gmp.svg" alt="GMP" class="cert-logo">
+      <img src="assets/img/certs/omri.svg" alt="OMRI" class="cert-logo">
+      <img src="assets/img/certs/ecocert.svg" alt="Ecocert" class="cert-logo">
+      <img src="assets/img/certs/chemexcil.svg" alt="Chemexcil" class="cert-logo">
+      <img src="assets/img/certs/shefexil.svg" alt="SHEFEXIL" class="cert-logo">
+    </div>
+  </section>
+
   <!-- Technology & Contract Manufacturing -->
   <section class="features">
     <div class="tile-grid tile-grid--two">
@@ -135,32 +166,9 @@
     </div>
   </section>
 
-  <!-- Why Kriya -->
-  <section class="why">
-    <h2>Why Kriya?</h2>
-    <div class="tile-grid tile-grid--four">
-      <div class="tile tile--left">
-        <h3>Premium &amp; Eco‑friendly</h3>
-        <p>We combine high‑purity botanicals and robust microbials with advanced delivery systems for consistent, residue‑conscious performance.</p>
-      </div>
-      <div class="tile tile--left">
-        <h3>Advanced Formulation</h3>
-        <p>Micro/nano‑encapsulation, co‑formulants for adhesion and rainfastness, and stability programs that protect sensitive actives.</p>
-      </div>
-      <div class="tile tile--left">
-        <h3>Distributor‑first</h3>
-        <p>Private‑label options, documentation support, and dependable supply — tailored for multi‑market product portfolios.</p>
-      </div>
-      <div class="tile tile--left">
-        <h3>Manufacturing Depth</h3>
-        <p>SC‑CO₂ extraction, solvent/aqueous extraction, fermentation, and packaging backed by analytics and quality systems.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Distributor CTA -->
+  <!-- Associate CTA -->
   <section class="cta">
-    <h2>Become a Distributor</h2>
+    <h2>Become an Associate</h2>
     <p>Partner with us to bring innovative biological solutions to more farmers worldwide.</p>
     <a href="contact.html" class="btn">Work with Us</a>
   </section>
