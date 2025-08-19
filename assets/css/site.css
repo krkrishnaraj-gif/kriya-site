@@ -1,6 +1,5 @@
 /* site.js — dropdown behavior (desktop hover + touch click), no auto-refresh */
 
-// Helpers
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -13,12 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mql.addEventListener) {
     mql.addEventListener('change', e => { isDesktop = e.matches; closeAll(); });
   } else if (mql.addListener) {
-    // Safari <14
     mql.addListener(e => { isDesktop = e.matches; closeAll(); });
   }
 
   function openDropdown(drop) {
-    // close others
     dropdowns.forEach(d => { if (d !== drop) closeDropdown(d, 0); });
     const panel = drop.querySelector('.dropdown-content');
     if (!panel) return;
@@ -48,67 +45,48 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdowns.forEach(d => closeDropdown(d, 0));
   }
 
-  // Wire events for each dropdown
   dropdowns.forEach(drop => {
     const trigger = drop.querySelector(':scope > a');
     const panel = drop.querySelector('.dropdown-content');
 
-    // Desktop: open/close on hover with delay, keep open while inside panel
-    drop.addEventListener('mouseenter', () => {
-      if (!isDesktop) return;
-      openDropdown(drop);
-    });
-
-    drop.addEventListener('mouseleave', () => {
-      if (!isDesktop) return;
-      scheduleClose(drop, 140);
-    });
+    // Desktop hover
+    drop.addEventListener('mouseenter', () => { if (isDesktop) openDropdown(drop); });
+    drop.addEventListener('mouseleave', () => { if (isDesktop) scheduleClose(drop, 140); });
 
     if (panel) {
-      panel.addEventListener('mouseenter', () => {
-        if (!isDesktop) return;
-        clearTimeout(closeTimers.get(drop));
-      });
-      panel.addEventListener('mouseleave', () => {
-        if (!isDesktop) return;
-        scheduleClose(drop, 140);
-      });
+      panel.addEventListener('mouseenter', () => { if (isDesktop) clearTimeout(closeTimers.get(drop)); });
+      panel.addEventListener('mouseleave', () => { if (isDesktop) scheduleClose(drop, 140); });
     }
 
-    // Keyboard accessibility: open on focusin, close when focus leaves the whole dropdown
+    // Keyboard focus
     drop.addEventListener('focusin', () => openDropdown(drop));
     drop.addEventListener('focusout', () => {
-      // Defer to allow focus to move within the panel
       setTimeout(() => {
         if (!drop.contains(document.activeElement)) closeDropdown(drop, 0);
       }, 150);
     });
 
-    // Touch/mobile: first tap opens, second tap follows the link
+    // Touch
     if (trigger) {
       trigger.addEventListener('click', (e) => {
-        if (isDesktop) return; // desktop uses hover + normal navigation
-        const isOpen = drop.classList.contains('open') ||
-                       (panel && panel.style.display === 'block');
+        if (isDesktop) return;
+        const isOpen = drop.classList.contains('open') || (panel && panel.style.display === 'block');
         if (!isOpen) {
-          e.preventDefault();   // prevent navigation on first tap
+          e.preventDefault();
           openDropdown(drop);
         } else {
-          // second tap: allow navigation
           closeAll();
         }
       });
     }
   });
 
-  // Click outside to close
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.navbar .dropdown')) closeAll();
   });
 
-  // ESC closes any open menu
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeAll();
   });
 });
-
+`
