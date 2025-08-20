@@ -152,7 +152,12 @@ body {
 }
 .btn.btn--ghost:hover { background: #dce9cf; }
 
-.hero-image picture, .hero-image img { max-width: 560px; width: 100%; height: auto; justify-self: end; }
+.hero-image picture, .hero-image img { 
+width: 100%;
+  height: 100%;          /* let it fill the container height */
+  object-fit: contain;   /* keep proportions */
+  max-height: 100%;      /* ensure it doesn’t stretch */
+justify-self: end; }
 
 /* ====== SECTION TITLES ====== */
 section h2 {
@@ -317,7 +322,7 @@ section h2 {
 @media (max-width: 980px){
   .hero-inner{ flex-direction:column-reverse; align-items:flex-start; }
   .hero-image{ width:100%; justify-content:flex-start; }
-  .hero-image img{ max-width:100%; }
+  .hero-image img{ max-width:100%; object-fit:contain; }
 }
 /* ========================
    Karyo Pipeline Infographic (global)
@@ -476,9 +481,9 @@ section h2 {
   color: #6B9A40;          /* dark‑green text */
 }
 
-/* Make header→hero spacing match index */
+/* Make header→hero spacing match index 
 .site-header + .hero{ margin-top: 16px; }
-
+*/
 /* Mobile tweaks */
 @media (max-width: 980px){
   .site-header .header-inner{ min-height: 56px; }
@@ -491,7 +496,7 @@ section h2 {
 .hero--product .hero-content{ flex:1; }
 .hero--product .hero-image.packshot{ flex:1; display:flex; justify-content:flex-end; }
 .hero--product .hero-image.packshot img{
-  max-width: 420px; height:auto; object-fit:contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.08));
+  max-width: 420px; height:auto; object-fit:contain; object-fit:contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.08));
 }
 @media (max-width: 980px){
   .hero--product .hero-inner{ flex-direction:column-reverse; align-items:flex-start; }
@@ -544,4 +549,32 @@ section h2 {
   background:#E9F1E0; border:1px solid #cfe0c3; color:#2d3a25; padding:6px 10px; border-radius:999px; font-size:13px;
 }
 .small{ font-size:12.5px; }
+/* Make hero image scale with text height */
+.hero--product .hero-inner,
+.hero--home .hero-inner {
+  align-items: stretch;   /* force equal height columns */
+}
+
+.hero--product .hero-content,
+.hero--home .hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* vertically center text */
+}
+
+.hero--product .hero-image,
+.hero--home .hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;   /* center image vertically */
+  justify-content: flex-end;
+}
+
+.hero--product .hero-image img,
+.hero--home .hero-image img {
+  width: 100%;
+  height: 100%;          /* let it fill the container height */
+  object-fit: contain;   /* keep proportions */
+  max-height: 100%;      /* ensure it doesn’t stretch */
+}
 
