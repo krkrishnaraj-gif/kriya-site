@@ -486,3 +486,62 @@ section h2 {
   .nav-links > li > a{ padding: 9px 10px; font-size: 15px; }
 }
 
+/* ==== Product hero with right packshot ==== */
+.hero--product .hero-inner{ display:flex; align-items:center; gap:32px; }
+.hero--product .hero-content{ flex:1; }
+.hero--product .hero-image.packshot{ flex:1; display:flex; justify-content:flex-end; }
+.hero--product .hero-image.packshot img{
+  max-width: 420px; height:auto; object-fit:contain; filter: drop-shadow(0 10px 22px rgba(0,0,0,.08));
+}
+@media (max-width: 980px){
+  .hero--product .hero-inner{ flex-direction:column-reverse; align-items:flex-start; }
+  .hero--product .hero-image.packshot img{ max-width: 70vw; }
+}
+
+/* ==== Highlight strip with title + description ==== */
+.highlight-strip{ background:#F4F8EF; padding:20px 0; }
+.hi-grid{
+  display:grid; grid-template-columns: repeat(5,1fr); gap:12px;
+}
+.hi-card{
+  background:#E9F1E0; border:1px solid #cfe0c3; border-radius:12px; padding:12px;
+}
+.hi-card h4{
+  margin:0 0 4px; font-size:15.5px; color:#2d3a25; font-weight:700; letter-spacing:.1px;
+}
+.hi-card p{
+  margin:0; font-size:13.5px; color:#4a5a3d;
+}
+@media (max-width: 980px){
+  .hi-grid{ grid-template-columns: 1fr 1fr; }
+}
+
+/* ==== Attractive info blocks (no bullets) ==== */
+.info-block{
+  display:flex; gap:12px; background:#fafcf8; border:1px solid #e2ead8; border-radius:14px;
+  padding:12px; margin-bottom:12px;
+}
+.info-ico{
+  flex:0 0 36px; height:36px; border-radius:50%; background:#6B9A40; color:#fff;
+  display:flex; align-items:center; justify-content:center; font-weight:800;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+.info-body h3{ margin:0 0 8px; }
+.info-list > div{ padding:8px; border:1px dashed #d6e3c9; border-radius:10px; margin-bottom:8px; background:#ffffff; }
+.info-list > div span{ display:block; font-weight:600; color:#2d3a25; }
+.info-list > div small{ display:block; color:#5c6b54; }
+
+.info-steps > div{
+  padding:10px 12px; border-left:3px solid #6B9A40; background:#ffffff; border-radius:8px; margin-bottom:8px;
+  box-shadow:0 2px 6px rgba(0,0,0,.03);
+}
+
+/* ==== MoA image & Applications chips on right ==== */
+.moa-img{ width:100%; height:auto; object-fit:contain; max-height:560px; margin-top:8px; }
+.apps-block{ margin-top:14px; }
+.chip-list{ display:flex; flex-wrap:wrap; gap:8px; }
+.chip{
+  background:#E9F1E0; border:1px solid #cfe0c3; color:#2d3a25; padding:6px 10px; border-radius:999px; font-size:13px;
+}
+.small{ font-size:12.5px; }
+
