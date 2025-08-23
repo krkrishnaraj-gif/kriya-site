@@ -577,4 +577,14 @@ section h2 {
   object-fit: contain;   /* keep proportions */
   max-height: 100%;      /* ensure it doesn’t stretch */
 }
+/* Compact spec table */
+.table-wrap{ overflow-x:auto; }
+.spec-table{ width:100%; border-collapse:separate; border-spacing:0; margin-top:6px; font-size:14px; }
+.spec-table th, .spec-table td{ padding:10px 12px; border:1px solid #e2ead8; }
+.spec-table thead th{ background:#F4F8EF; font-weight:700; text-align:left; color:#2d3a25; }
+.spec-table tbody td{ background:#fff; color:#2d3a25; }
+.spec-table tr:first-child th:first-child{ border-top-left-radius:10px; }
+.spec-table tr:first-child th:last-child{ border-top-right-radius:10px; }
+.spec-table tr:last-child td:first-child{ border-bottom-left-radius:10px; }
+.spec-table tr:last-child td:last-child{ border-bottom-right-radius:10px; }
 
