@@ -1,42 +1,78 @@
 
-:root{--green:#6B9A40;--green-dark:#2F4F1F;--green-200:#E9F1E0;--text:#1c1c1c;--muted:#5b6a58;--border:#e2ead8;--bg:#fafcf7}
+:root{
+  --green:#6B9A40;
+  --green-dark:#2F4F1F;
+  --green-200:#E9F1E0;
+  --text:#1c1c1c;
+  --muted:#5b6a58;
+  --border:#e2ead8;
+  --bg:#fafcf7;
+}
+
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;color:var(--text);background:#fff;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
+html,body{margin:0;padding:0;background:#fff;color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
 img{max-width:100%;height:auto;display:block}
 .container{max-width:1200px;margin:0 auto;padding:0 20px}
-.header-inner,.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-.logo img{height:44px}
+
+/* Header */
+.header-inner, .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+.logo img{height:44px;width:auto}
 .navbar .nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
 .navbar a{display:inline-block;padding:8px 10px;text-decoration:none;color:var(--green-dark);font-weight:600}
 .navbar a:hover{background:var(--green-200);color:var(--green);border-radius:6px}
-.dropdown{position:relative}
-.dropdown-content{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--border);min-width:240px;padding:8px 0;z-index:1000}
+.navbar .dropdown{position:relative}
+.dropdown-content{
+  display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--border);
+  padding:8px 0;min-width:240px;z-index:1000
+}
 .dropdown:hover>.dropdown-content{display:block}
-.dropdown-content>li{list-style:none;position:relative}
+.dropdown-content>li{position:relative;list-style:none}
 .dropdown-content a{display:block;padding:8px 12px;color:var(--text);font-weight:500}
 .dropdown-content a:hover{background:var(--green-200);color:var(--green)}
+/* second-level submenu */
 .dropdown-sub{display:none;position:absolute;left:100%;top:0;background:#fff;border:1px solid var(--border);min-width:220px;padding:8px 0;z-index:1100}
 .dropdown-content li:hover>.dropdown-sub{display:block}
+
+/* tooltips */
 .has-tip{position:relative}
-.has-tip::after{content:attr(data-tip);position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);background:var(--green-dark);color:#fff;font-size:12px;padding:6px 8px;border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s ease,transform .12s ease;z-index:1200}
-.has-tip:hover::after{opacity:1;transform:translateX(-50%) translateY(-2px)}
+.has-tip::after{
+  content:attr(data-tip);position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%);
+  background:var(--green-dark);color:#fff;font-size:12px;line-height:1;padding:6px 8px;border-radius:4px;white-space:nowrap;
+  opacity:0;pointer-events:none;transition:opacity .12s ease, transform .12s ease;z-index:1200
+}
+.has-tip:hover::after,.has-tip:focus::after{opacity:1;transform:translateX(-50%) translateY(-2px)}
+
+/* Hero */
 .hero{padding:36px 0;border-top:1px solid var(--border);background:var(--bg)}
 .hero--tight{padding:28px 0}
 .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
-.eyebrow{color:var(--green);font-weight:700;margin:0 0 4px}
+.eyebrow{color:var(--green);font-weight:700;letter-spacing:.02em;margin:0 0 4px}
 .hero h1{font-size:40px;line-height:1.15;margin:0 0 6px}
 .hero-sub{color:var(--muted);margin:0 0 10px}
+.packshot img{max-height:340px;margin:0 auto}
+
+/* Tiles */
 .section-head h2{margin:0 0 8px}
 .tile-grid{display:grid;gap:16px}
 .tile-grid--four{grid-template-columns:repeat(4,1fr)}
+.tile-grid--three{grid-template-columns:repeat(3,1fr)}
 .tile-grid--two{grid-template-columns:repeat(2,1fr)}
 .tile{background:#fff;border:1px solid var(--border);border-radius:10px;padding:16px}
-.tile--nav{transition:transform .12s ease,box-shadow .12s ease}
+.tile--nav{transition:transform .12s ease, box-shadow .12s ease}
 .tile--nav:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.06)}
 .tile-media{aspect-ratio:4/5;overflow:hidden;border-radius:8px;background:#f3f6ef;margin-bottom:10px;display:flex;align-items:center;justify-content:center}
 .tile-body h3{margin:4px 0}
 .btn{display:inline-block;background:var(--green);color:#fff;border:none;border-radius:8px;padding:10px 14px;text-decoration:none;font-weight:600}
+.btn.small{padding:8px 12px;border-radius:7px}
 .btn:hover{background:#598534}
+
+/* Highlight strip */
+.highlight-strip{background:var(--bg);padding:18px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.hi-grid{display:grid;gap:12px;grid-template-columns:repeat(5,1fr)}
+.hi-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center}
+.hi-card h4{margin:0 0 6px;color:var(--green-dark)}
+
+/* Product detail */
 .product-split .tile--left{border-color:#dfe8d3}
 .info-block{display:flex;gap:12px;margin-bottom:14px}
 .info-ico{width:28px;height:28px;border-radius:7px;background:var(--green-200);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--green)}
@@ -53,9 +89,21 @@ img{max-width:100%;height:auto;display:block}
 .muted{color:var(--muted)}
 .small{font-size:12px}
 .moa-img{width:100%;border:1px solid var(--border);border-radius:10px}
+
+/* Footer */
 .site-footer{border-top:1px solid var(--border);background:#fff;margin-top:30px}
 .footer-inner{flex-direction:column;align-items:flex-start;padding:16px 0}
 .footer-icons{display:flex;gap:10px;margin:6px 0}
 .disclaimer{color:var(--muted);font-size:12px;margin:8px 0 0}
-@media (max-width:960px){.hero-inner{grid-template-columns:1fr}.tile-grid--four{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:560px){.tile-grid--four{grid-template-columns:1fr}.tile-grid--two{grid-template-columns:1fr}}
+
+/* Responsive */
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr}
+  .tile-grid--four{grid-template-columns:repeat(2,1fr)}
+  .hi-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:560px){
+  .tile-grid--four{grid-template-columns:1fr}
+  .tile-grid--three{grid-template-columns:1fr}
+  .tile-grid--two{grid-template-columns:1fr}
+}

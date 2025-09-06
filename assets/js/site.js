@@ -1,1 +1,1 @@
-// Minimal JS; hover menus via CSS only.
+// Menus are purely CSS hover; no JS needed here.
