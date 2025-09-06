@@ -588,3 +588,31 @@ section h2 {
 .spec-table tr:last-child td:first-child{ border-bottom-left-radius:10px; }
 .spec-table tr:last-child td:last-child{ border-bottom-right-radius:10px; }
 
+
+
+/* hover-only tooltip */
+.has-tip { position: relative; }
+.has-tip::after{
+  content: attr(data-tip);
+  position:absolute; left:50%; top:calc(100% + 8px);
+  transform:translateX(-50%);
+  background:#2F4F1F; color:#fff; font-size:12px; line-height:1;
+  padding:6px 8px; border-radius:4px; white-space:nowrap;
+  opacity:0; pointer-events:none;
+  transition:opacity 120ms ease, transform 120ms ease;
+  z-index:1000;
+}
+.has-tip:hover::after, .has-tip:focus::after{
+  opacity:1; transform:translateX(-50%) translateY(-2px);
+}
+
+/* second-level submenu (flyout) */
+.dropdown-sub{
+  display:none; position:absolute; left:100%; top:0;
+  background:#fff; padding:8px 0; min-width:200px;
+  border:1px solid #e2ead8; z-index:1000;
+}
+.dropdown-content li{ position:relative; }
+.dropdown-content li:hover > .dropdown-sub{ display:block; }
+
+
